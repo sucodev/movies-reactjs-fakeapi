@@ -5,14 +5,11 @@ interface GenresPropsSidebar {
     title: string;
     name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
   }>;
-  selectedGenreId: any;
+  selectedGenreId: number | boolean;
   handleClickButton: (id: number) => void;
 }
 
-
 export function SideBar({ allGenres, selectedGenreId, handleClickButton }: GenresPropsSidebar) {
-
-
 
   return (
     <nav className="sidebar">

@@ -50,12 +50,13 @@ export function App() {
 
   function handleClickButton(id: number) {
     setSelectedGenreId(id);
+
   }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
 
-      <SideBar allGenres={genres} selectedGenreId handleClickButton={handleClickButton} />
+      <SideBar allGenres={genres} selectedGenreId={selectedGenreId} handleClickButton={handleClickButton} />
 
       <Content genreTitle={selectedGenre.title} genreMovies={movies} />
 
