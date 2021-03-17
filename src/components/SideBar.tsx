@@ -20,7 +20,7 @@ export function SideBar({ allGenres, selectedGenreId, handleClickButton }: Genre
 
       <div className="buttons-container">
         {allGenres.map(genre => (
-          <Button
+          <Button key={genre.title}
             id={String(genre.id)}
             title={genre.title}
             iconName={genre.name}
